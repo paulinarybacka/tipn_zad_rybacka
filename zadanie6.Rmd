@@ -1,0 +1,73 @@
+---
+title: "Gossip Girl"
+author: "Paulina Rybacka"
+date: "29 05 2018"
+output: 
+  html_document: 
+    df_print: paged
+    theme: spacelab
+    highlight: textmate
+---
+
+# Plotkara (serial telewizyjny)
+
+Plotkara – amerykański serial młodzieżowy oparty na serii powieści Cecily von Ziegesar o tym samym tytule. Narratorem serialu jest blogerka - Plotkara o nieznanej tożsamości (dowiadujemy się kim jest dopiero w ostatnim odcinku 6 sezonu). Opisuje ona skandaliczne życie uczniów prywatnej szkoły na Upper East Side w Nowym Jorku.
+
+<https://en.wikipedia.org/wiki/Gossip_Girl>
+
+![](gossipgirl.png)
+
+# Odcinki
+
+| SERIA | ILOŚĆ ODCINKÓW | PREMIERA SERII      | FINAŁ SERII     |   |
+|-------|----------------|---------------------|-----------------|---|
+| 1     | 18             | 19 września 2007    | 19 maja 2008    |   |
+| 2     | 25             | 1 września 2008     | 18 maja 2009    |   |
+| 3     | 22             | 14 września 2009    | 17 maja 2010    |   |
+| 4     | 22             | 13 września 2010    | 16 maja 2011    |   |
+| 5     | 24             | 26 września 2011    | 14 maja 2012    |   |
+| 6     | 10             | 8 października 2012 | 17 grudnia 2012 |   |
+
+# Informacje o serialu
+
++ gatunek: serial młodzieżowy
++ kraj produkcji: Stany Zjednoczone
++ twórcy: Josh Schwartz, Stephanie Savage
++ główne role: Blake Lively, Leighton Meester, Penn Badgley, Chace Crawford, Taylor Momsen, Ed Westwick, Kelly Rutherford, Matthew Settle, Jessica Szohr, Kaylee DeFer
+
+## TOP 10 adresów wartych odwiedzenia z planu Gossip Girl
+
+1. The Campbell Apartment (*15 Vanderbilt Avenue*)
+2. Gramercy Tavern (*42 E 20th Street*)
+3. Dylan's Candy Bar (*1011 Third Avenue*)
+4. Veselka (*144 2nd Avenue*)
+5. Erin McKenna's Bakery NYC  (*248 Broome Street*)
+6. Pinkberry (*1039 2nd Avenue*)
+7. The Empire Hotel Bar (*44 W 63rd Street*)
+8. Communitea (*11-18 46th Road, Long Island City*)
+9. Ladurée (*864 Madison Avenue oraz 398 West Broadway*)
+10. The Oak Room (*10 Central Park South *)
+
+Aby zobaczyć jak wyglądają te miejsca, wystarczy kliknąć [tutaj](https://miumag.pl/travel/nowojorski-przewodnik-z-planu-gossip-girl-10-top-a-7549)
+
+`Blair Waldorf: "Once again the world has proven anything you can do, I can do it better.`
+
+## Teraz reszta (nie na temat)
+
+```{r}
+library(ggplot2)
+ggplot(data = mpg) +
+geom_point(mapping = aes(x = displ , y = cty))
+```
+
+```{r}
+library(tidyverse)
+diamonds %>% filter(cut == "Very Good")
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+ggplot(data = mpg) +
+  geom_bar(mapping = aes(x = class, fill = class)) +
+  labs(title = "Klasy samochodów", x = "Klasa", y = "Liczebność")
+```
